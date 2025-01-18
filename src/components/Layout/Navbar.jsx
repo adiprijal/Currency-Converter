@@ -1,5 +1,6 @@
 import React from "react";
-import logo from '../logo2.svg';  
+import logo from '../../logo2.svg';  
+import './Navbar.module.css';
 
 const Nav = () => {
   return (

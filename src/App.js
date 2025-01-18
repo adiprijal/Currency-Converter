@@ -1,7 +1,7 @@
 import React from 'react';
 import CurrencyConverter from './components/Converter';
 import './App.css';
-import Nav from './components/nav';
+import Nav from './components/Layout/Navbar';
 
 
 function App() {
