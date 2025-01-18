@@ -8,14 +8,18 @@ nav header{
       background-repeat: no-repeat;
 }
 
-img{
-      width: 50px;
-      height: 50px;
-}
+
+
 
 nav h1{
       font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       font-size: 25pt;
       font-style: italic;
       margin-left: 12px;
+}
+
+@media (max-width: 20%) {
+      nav h1{
+            font-size: 20pt;
+      }
 }
