@@ -1,15 +1,20 @@
 nav header{
       display: flex;
       align-items: center;
-      padding: 0.5rem 1rem;
-      
-      /* background: linear-gradient(30deg, rgba(34,193,195,1) 0%, rgba(87,179,188,1) 19%, rgba(220,166,128,1) 38%, rgba(101,149,199,0.9715099715099715) 54%, rgba(201,159,198,1) 77%, rgba(60,238,165,1) 100%, rgba(143,162,227,1) 100%, rgba(253,187,45,1) 100%); */
-      background-position: center;
-      background-repeat: no-repeat;
+      border: 3px solid #000;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 10px; 
+      border-radius: 30px;
+      padding: 1rem;
 }
 
-
-
+nav header img{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+}
 
 nav h1{
       font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
