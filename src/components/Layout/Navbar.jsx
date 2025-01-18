@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../../logo.svg';  
+import logo from '../../images/logo.svg';
 import './Navbar.module.css';
 
 const Nav = () => {
@@ -7,8 +7,8 @@ const Nav = () => {
     <nav>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-      </header>
       <h1>Currency Converter</h1>
+      </header>
     </nav>
   );
 }

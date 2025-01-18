@@ -1,10 +1,17 @@
 .App {
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   background-color: #e0f7fa;
-   min-height: 100vh;
+   min-height: 82vh;
    display: flex;
    justify-content: center;
    align-items: center;
+  }
+  body {
+   background-image: url("./images/coin.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+   margin: 0;
+   padding: 0;
  }
  .App-logo {
    height: 150px;
@@ -13,4 +20,3 @@
    object-fit: cover;  /* Keeps it fitted */
    overflow: hidden;
  }
- 
