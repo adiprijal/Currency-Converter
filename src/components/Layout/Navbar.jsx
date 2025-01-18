@@ -7,7 +7,7 @@ const Nav = () => {
     <nav>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-      <h1>Currency Converter</h1>
+      <h1>HeraPheri</h1>
       </header>
     </nav>
   );

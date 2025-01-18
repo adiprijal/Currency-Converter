@@ -1,4 +1,4 @@
-# Currency Converter App
+# HeraPheri (Currency Converter App)
 
 A responsive and user-friendly Currency Converter web application built with **React.js**. This app allows users to convert between different currencies using real-time exchange rates with a sleek UI and dark mode support.
 
@@ -55,7 +55,7 @@ A responsive and user-friendly Currency Converter web application built with **R
 ## Folder Structure
 
 ```
-currency-converter-app/
+herapheri/
 ├── src/
 │   ├── components/
 |   |   ├── Layout/ 
@@ -65,9 +65,6 @@ currency-converter-app/
 │   │   |   └── DarkModeToggle.css
 |   |   ├── Converter.js
 |   |   └──Converter.css 
-│   ├── images/
-|   |   ├── coin.jpg
-│   │   └── logo.svg
 │   ├── App.js
 │   ├── App.css
 |   ├── index.js
@@ -82,7 +79,7 @@ currency-converter-app/
 ## Screenshots
 
 ### Light Mode
-![Light Mode Screenshot](screenshots/light-mode.png)
+![Light Mode Screenshot](./src/images/light-mode.png)
 
 ### Dark Mode
 ![Dark Mode Screenshot](screenshots/dark-mode.png)
