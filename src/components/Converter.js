@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Converter.css';
+import { FaExchangeAlt } from 'react-icons/fa';
 
 const CurrencyConverter = () => {
   const [currencies, setCurrencies] = useState([]);
@@ -26,6 +27,13 @@ const CurrencyConverter = () => {
       .catch(error => console.error('Conversion error:', error));
   };
 
+  // Function to swap currencies
+  const swapCurrencies = () => {
+    const temp = fromCurrency;
+    setFromCurrency(toCurrency);
+    setToCurrency(temp);
+  };
+
   return (
     <div className="converter-container">
       <h1>Currency Converter</h1>
@@ -41,12 +49,16 @@ const CurrencyConverter = () => {
           ))}
         </select>
         <span>to</span>
+    
         <select value={toCurrency} onChange={(e) => setToCurrency(e.target.value)}>
           {currencies.map((currency) => (
             <option key={currency} value={currency}>{currency}</option>
           ))}
         </select>
       </div>
+      <button className="swap-button" onClick={swapCurrencies}>
+           <FaExchangeAlt />
+        </button>
       <button onClick={convertCurrency}>Convert</button>
       {convertedAmount && (
         <h2>{amount} {fromCurrency} = {convertedAmount} {toCurrency}</h2>
