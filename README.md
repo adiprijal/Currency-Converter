@@ -1,70 +1,144 @@
-# Getting Started with Create React App
+# Currency Converter App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive and user-friendly Currency Converter web application built with **React.js**. This app allows users to convert between different currencies using real-time exchange rates with a sleek UI and dark mode support.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- 💵 **Real-Time Currency Conversion**
+- 🔍 **Live Exchange Rates via API Integration**
+- 🌟 **User-Friendly and Responsive UI**
+- 🌙 **Dark Mode Toggle for Better Accessibility**
+- ⬆️⬇️ **Dropdowns for Selecting Currencies**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **Frontend:** React.js, CSS
+- **API:** [ExchangeRate API](https://api.exchangerate-api.com/)
+- **Package Manager:** npm
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Installation and Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/currency-converter-app.git
+   cd currency-converter-app
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Run the App:**
+   ```bash
+   npm start
+   ```
+   The app will run at `http://localhost:3000`.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Enter the amount** you want to convert.
+2. **Select the currencies** from the dropdowns.
+3. Click the **Convert** button to see the result.
+4. Toggle **Dark Mode** for a different UI theme.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Folder Structure
 
-## Learn More
+```
+currency-converter-app/
+├── src/
+│   ├── components/
+|   |   ├── Layout/ 
+|   |   |   ├── Converter.jsx
+|   |   |   ├── Navabar.css 
+|   |   |   ├── DarkModeToggle.jsx
+│   │   |   └── DarkModeToggle.css
+|   |   ├── Converter.js
+|   |   └──Converter.css 
+│   ├── images/
+|   |   ├── coin.jpg
+│   │   └── logo.svg
+│   ├── App.js
+│   ├── App.css
+|   ├── index.js
+│   └── index.css
+├── package.json
+├── .gitignore
+└── README.md
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Screenshots
 
-### Code Splitting
+### Light Mode
+![Light Mode Screenshot](screenshots/light-mode.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Dark Mode
+![Dark Mode Screenshot](screenshots/dark-mode.png)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## API Reference
 
-### Making a Progressive Web App
+- **Base URL:** `https://api.exchangerate-api.com/v4/latest/{currency}`
+- **Example:** Convert from USD to NPR
+  ```bash
+  https://api.exchangerate-api.com/v4/latest/USD
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Fork the repository.
+2. Create your feature branch:
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add your feature"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/YourFeature
+   ```
+5. Open a pull request.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
+This project is licensed under the [MIT License](LICENSE).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Acknowledgements
+
+- Inspired by modern fintech apps.
+- Powered by [ExchangeRate API](https://api.exchangerate-api.com/).
+
+---
+
+## Contact
+
+For any inquiries or suggestions, feel free to contact:
+
+**Adip Rijal**  
+Email: [pas081bct005@wrc.edu.np](mailto:pas081bct005@wrc.edu.np)  
+GitHub: [adiprijal](https://github.com/adiprijal)
+
+---
+
+Enjoy using the Currency Converter App! 📈
