@@ -5,7 +5,7 @@ import "./Converter.css";
 const CurrencyConverter = () => {
   const [currencies, setCurrencies] = useState([]);
   const [fromCurrency, setFromCurrency] = useState("USD");
-  const [toCurrency, setToCurrency] = useState("EUR");
+  const [toCurrency, setToCurrency] = useState("NPR");
   const [amount, setAmount] = useState(1);
   const [exchangeRate, setExchangeRate] = useState(1);
   const [exchangedValue, setExchangedValue] = useState(0);

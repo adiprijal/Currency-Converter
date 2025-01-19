@@ -44,3 +44,10 @@ body.dark-mode .App-header {
 body.dark-mode h1 {
   color: white;
 }
+
+footer {
+  text-align:center; 
+  padding: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+}
