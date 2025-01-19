@@ -1,33 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import './Converter.css';
-import { FaExchangeAlt } from 'react-icons/fa';
+import React, { useState, useEffect } from "react";
+import { FaExchangeAlt } from "react-icons/fa";
+import "./Converter.css";
 
 const CurrencyConverter = () => {
   const [currencies, setCurrencies] = useState([]);
-  const [fromCurrency, setFromCurrency] = useState('USD');
-  const [toCurrency, setToCurrency] = useState('NPR');
+  const [fromCurrency, setFromCurrency] = useState("USD");
+  const [toCurrency, setToCurrency] = useState("EUR");
   const [amount, setAmount] = useState(1);
-  const [convertedAmount, setConvertedAmount] = useState(null);
+  const [exchangeRate, setExchangeRate] = useState(1);
+  const [exchangedValue, setExchangedValue] = useState(0);
 
+  const API_URL = "https://v6.exchangerate-api.com/v6/a72dcf2c1bef2c85a0cf648e/latest";
+
+  // Fetch exchange rates on initial load and currency change
   useEffect(() => {
-    axios.get('https://api.exchangerate-api.com/v4/latest/USD')
-      .then(response => {
-        setCurrencies(Object.keys(response.data.rates));
+    fetch(`${API_URL}/${fromCurrency}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setCurrencies(Object.keys(data.conversion_rates));
+        setExchangeRate(data.conversion_rates[toCurrency]);
       })
-      .catch(error => console.error('Error fetching data:', error));
-  }, []);
+      .catch((error) => console.error("Error fetching exchange rates:", error));
+  }, [fromCurrency, toCurrency]);
 
-  const convertCurrency = () => {
-    axios.get(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`)
-      .then(response => {
-        const rate = response.data.rates[toCurrency];
-        setConvertedAmount((amount * rate).toFixed(2));
-      })
-      .catch(error => console.error('Conversion error:', error));
-  };
+  // Calculate exchanged value instantly
+  useEffect(() => {
+    setExchangedValue((amount * exchangeRate).toFixed(2));
+  }, [amount, exchangeRate]);
 
-  // Function to swap currencies
+  // Swap function
   const swapCurrencies = () => {
     const temp = fromCurrency;
     setFromCurrency(toCurrency);
@@ -43,26 +44,35 @@ const CurrencyConverter = () => {
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
         />
-        <select value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)}>
+        <select
+          value={fromCurrency}
+          onChange={(e) => setFromCurrency(e.target.value)}
+        >
           {currencies.map((currency) => (
-            <option key={currency} value={currency}>{currency}</option>
+            <option key={currency} value={currency}>
+              {currency}
+            </option>
           ))}
         </select>
-        <span>to</span>
-    
-        <select value={toCurrency} onChange={(e) => setToCurrency(e.target.value)}>
+
+        <button className="swap-button" onClick={swapCurrencies}>
+          <FaExchangeAlt />
+        </button>
+      </div>
+
+      <div className="output-section">
+        <div className="exchanged-box">{exchangedValue} {toCurrency}</div>
+        <select
+          value={toCurrency}
+          onChange={(e) => setToCurrency(e.target.value)}
+        >
           {currencies.map((currency) => (
-            <option key={currency} value={currency}>{currency}</option>
+            <option key={currency} value={currency}>
+              {currency}
+            </option>
           ))}
         </select>
       </div>
-      <button className="swap-button" onClick={swapCurrencies}>
-           <FaExchangeAlt />
-        </button>
-      <button onClick={convertCurrency}>Convert</button>
-      {convertedAmount && (
-        <h2>{amount} {fromCurrency} = {convertedAmount} {toCurrency}</h2>
-      )}
     </div>
   );
 };
