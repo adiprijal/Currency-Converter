@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import logo from "../../images/logo.svg";
-import DarkModeToggle from "./DarkModeToggle"; // Import DarkModeToggle
+import DarkModeToggle from "../DarkModeToggle"; // Import DarkModeToggle
 import "./Navbar.css";
 
 const Nav = () => {
@@ -15,7 +15,7 @@ const Nav = () => {
           <Link to="/currency" className="nav-link">Currency</Link>
           <Link to="/exchange-rate" className="nav-link">Exchange Rate</Link>
         </div>
-        <DarkModeToggle /> {/* Dark mode toggle button */}
+        <DarkModeToggle /> 
       </header>
     </nav>
   );

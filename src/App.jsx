@@ -1,14 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import CurrencyConverter from "./components/pages/Converter";
+import CurrencyConverter from "./pages/Converter";
 import Nav from './components/Layout/Navbar';
-import ExchangeRate from './components/pages/ExchangeRate'; 
-import Currency from './components/pages/Currency'; 
+import ExchangeRate from './pages/ExchangeRate'; 
+import Currency from './pages/Currency'; 
+import Footer from './components/Layout/Footer';
 import './App.css';
+import { ThemeProvider } from "./context/ThemeContext";
+
 
 function App () {
   return (
    <>
+   <ThemeProvider>
     <Router>
       <Nav />
       <Routes>
@@ -17,7 +21,8 @@ function App () {
         <Route path="/currency" element={<Currency />} />
       </Routes>
     </Router>
-    <footer>@ Adip Rijal. Rights Reserved.</footer>
+    <Footer />
+   </ThemeProvider>
    </>
   );
 };

@@ -47,7 +47,7 @@ body.dark-mode h1 {
 
 footer {
   text-align:center; 
-  padding: 50px;
+  padding: 10dvh;
   font-family: 'Courier New', Courier, monospace;
   font-style: italic;
 }
