@@ -1,0 +1,157 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.navbar--dark {
+  background-color: rgba(17, 24, 39, 0.641);
+}
+
+.navbar__container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.navbar__brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #de9d47, #1da5aa);
+  -webkit-background-clip: text;
+  background-clip: text; /* Standard property */
+  color: transparent;
+}
+
+.navbar__nav {
+  display: none;
+}
+
+.navbar__nav--visible {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar__link {
+  position: relative;
+  color: #162235;
+  transition: color 0.3s;
+  text-decoration: none; /* Remove underline from links */
+}
+
+.navbar__link--active {
+  color: #7e5bef;
+}
+
+.navbar__link--dark {
+  color: #d1d5db;
+}
+
+.navbar__link--active-dark {
+  color: #a78bfa;
+}
+
+.navbar__underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0.125rem;
+  background-color: #7e5bef;
+  bottom: -0.25rem;
+}
+
+.navbar__underline--dark {
+  background-color: #a78bfa;
+}
+
+.navbar__themeButton {
+  aspect-ratio: 1/1;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.navbar__themeButton:hover {
+  background-color: #f3f4f6;
+}
+
+.navbar__themeButton--dark:hover {
+  background-color: #374151;
+}
+
+.navbar__menuButton {
+  padding: 0.5rem;
+}
+
+.navbar__mobileMenu {
+  display: none;
+}
+
+.navbar__mobileMenu--visible {
+  display: block;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+}
+
+.navbar__mobileMenu--dark {
+  background-color: #111827;
+}
+
+.navbar__mobileLink {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar__mobileLink--active {
+  color: #7e5bef;
+  background-color: #f3e8ff;
+}
+
+.navbar__mobileLink--dark {
+  color: #d1d5db;
+}
+
+.navbar__mobileLink--active-dark {
+  color: #a78bfa;
+  background-color: #1f2937;
+}
+
+.navbar__mobileLink:hover {
+  color: #7e5bef;
+  background-color: #f3e8ff;
+}
+
+.navbar__mobileLink--dark:hover {
+  color: #a78bfa;
+  background-color: #1f2937;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .navbar__nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .navbar__menuButton {
+    display: none;
+  }
+
+  .navbar__mobileMenu {
+    display: none;
+  }
+}

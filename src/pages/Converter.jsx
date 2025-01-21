@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaExchangeAlt } from "react-icons/fa";
+import PageTransition from '../components/shared/PageTransition.jsx';
+import SectionTitle from '../components/shared/SectionTitle.jsx';
 import "./Converter.css";
 
 const CurrencyConverter = () => {
@@ -9,6 +11,9 @@ const CurrencyConverter = () => {
   const [amount, setAmount] = useState(1);
   const [exchangeRate, setExchangeRate] = useState(1);
   const [exchangedValue, setExchangedValue] = useState(0);
+
+
+  
 
   const API_URL = "https://v6.exchangerate-api.com/v6/a72dcf2c1bef2c85a0cf648e/latest";
 
@@ -36,13 +41,19 @@ const CurrencyConverter = () => {
   };
 
   return (
+    <PageTransition>
     <div className="converter-container">
       <h1>Currency Converter</h1>
       <div className="input-section">
         <input
+          
           type="number"
           value={amount}
-          onChange={(e) => setAmount(e.target.value)}
+          onChange={(e) => {
+            const value = Math.max(0, e.target.value);
+            setAmount(value);
+          }}
+          min={0}
         />
         <select
           value={fromCurrency}
@@ -74,6 +85,7 @@ const CurrencyConverter = () => {
         </select>
       </div>
     </div>
+    </PageTransition>
   );
 };
 
