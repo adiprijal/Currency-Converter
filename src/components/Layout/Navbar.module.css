@@ -2,12 +2,16 @@
   position: fixed;
   width: 100%;
   z-index: 50;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(255, 255, 255);
   backdrop-filter: blur(10px);
+  border-bottom: #374151;
+  border-width: 0.5px;
+
 }
 
 .navbar--dark {
-  background-color: rgba(17, 24, 39, 0.641);
+  background-color: rgba(0, 0, 0, 0.844);
+  border-bottom: #ffffff;
 }
 
 .navbar__container {
@@ -41,7 +45,7 @@
 
 .navbar__link {
   position: relative;
-  color: #162235;
+  color: #000000;
   transition: color 0.3s;
   text-decoration: none; /* Remove underline from links */
 }
@@ -51,7 +55,7 @@
 }
 
 .navbar__link--dark {
-  color: #d1d5db;
+  color: #ffffff;
 }
 
 .navbar__link--active-dark {
@@ -84,7 +88,8 @@
 }
 
 .navbar__themeButton--dark:hover {
-  background-color: #374151;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .navbar__menuButton {

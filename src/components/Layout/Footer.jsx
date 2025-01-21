@@ -15,7 +15,8 @@ const Footer = () => {
     ];
 
     return (
-        <footer className={`${styles.footer} ${isDarkMode ? styles['footer--dark'] : ''}`}>
+        <footer className={`${styles.footer} ${isDarkMode ? 
+            styles['footer--dark'] : ''}`}>
             <div className={styles.footer__container}>
                 <div className={styles.footer__content}>
                     <div className={styles.footer__socialLinks}>

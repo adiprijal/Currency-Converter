@@ -1,11 +1,13 @@
 .footer {
-   background-color: #f0f0f0;
-   padding: 1.5dvh;
+   background-color: #ffffff;
+   padding: 0.5dvh;
+   padding-top: 1.5dvh;
+   padding-bottom: 0%;
    text-align: center;
 }
 
 .footer--dark {
-   background-color: #222;
+   background-color: rgba(0, 0, 0, 0.8);
    color: #ddd;
 }
 
@@ -27,6 +29,7 @@
 .footer__socialLinks {
    display: flex;
    gap: 1rem;
+   align-items: baseline;
 }
 
 .footer__socialLink {
@@ -47,7 +50,7 @@
 }
 
 .footer__text {
-   font-size: 0.9rem;
+   font-size: 0.8rem;
    margin-top: 1rem;
 }
 
