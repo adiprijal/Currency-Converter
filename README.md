@@ -108,6 +108,12 @@ herapheri/
 ### Dark Mode
 ![Dark Mode Screenshot](screenshots/dark-mode.png)
 
+### Other images
+![Currency Converter](./src/images/converter.png)
+![Exchange Rate](./src/images/exchangerate.png)
+
+![Currency](./src/images/currency.png)
+![Currency Dark Mode](./src/images/currencydark.png)
 ---
 
 ## API Reference
