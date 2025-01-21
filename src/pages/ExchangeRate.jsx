@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "./ExchangeRate.module.css";
 import { useTheme } from "../context/ThemeContext";
+import PageTransition from "../components/shared/PageTransition.jsx";
+import SectionTitle from "../components/shared/SectionTitle.jsx";
 
 const ExchangeRate = () => {
     const [rates, setRates] = useState({});
@@ -34,8 +36,12 @@ const ExchangeRate = () => {
     };
 
     return (
+        <PageTransition>
         <div className={`${styles.exchangeRate} ${isDarkMode ? styles["exchangeRate--dark"] : ""}`}>
-            <h2>Exchange Rate</h2>
+            <div className={styles.SectionTitle}>
+            <SectionTitle 
+                title="Exchange Rate" />
+            </div>
             <div className={styles.dropdownContainer}>
                 <select
                     value={fromCurrency}
@@ -67,6 +73,7 @@ const ExchangeRate = () => {
                 1 {fromCurrency} = {exchangeRate} {toCurrency}
             </p>
         </div>
+    </PageTransition>
     );
 };
 

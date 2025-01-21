@@ -2,7 +2,7 @@
 .container {
    font-family: "Poppins", sans-serif;
    padding: 20px;
-   background: linear-gradient(135deg, #6c63ff, #3b3b98);
+   /* background: linear-gradient(135deg, #6c63ff, #3b3b98); */
    color: #fff;
    min-height: 100vh;
    display: flex;
@@ -14,9 +14,14 @@
    font-size: 2rem;
    margin-bottom: 20px;
    text-align: center;
-   color: #ffcb6b;
+   color: linear-gradient(135deg, #3c387c, #3b3b98);
  }
  
+
+ .about__sectionTitle {
+  margin-bottom: 3rem;
+ }
+
  /* Table Styling */
  table {
    width: 100%;
