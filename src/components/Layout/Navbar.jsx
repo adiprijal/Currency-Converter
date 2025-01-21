@@ -21,7 +21,7 @@ const Nav = () => {
     <nav className={`${styles.navbar} ${isDarkMode ? styles['navbar--dark'] : ""}`}>
       <div className={styles.navbar__container}>
         <Link to="/" className={styles.navbar__brand}>
-          {/* <img src={logo} className="App-logo" alt="logo" style={{ width: "90px", height: "auto" }} /> */}
+          <img src={logo} className="App-logo" alt="logo" style={{ width: "3.3dvh", height: "auto", borderRadius:"50%", paddingRight:"8px" }} />
           HeraPheri
         </Link>
 

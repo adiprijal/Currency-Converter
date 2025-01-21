@@ -26,8 +26,8 @@ A responsive and user-friendly Currency Converter web application built with **R
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/currency-converter-app.git
-   cd currency-converter-app
+   git clone https://github.com/adiprijal/Currency-Converter.git
+   cd Currency-Converter
    ```
 
 2. **Install Dependencies:**
@@ -40,6 +40,11 @@ A responsive and user-friendly Currency Converter web application built with **R
    npm start
    ```
    The app will run at `http://localhost:3000`.
+
+4. **Build for Productions:**
+   ```bash
+   npm run build
+   ```
 
 ---
 
@@ -56,18 +61,37 @@ A responsive and user-friendly Currency Converter web application built with **R
 
 ```
 herapheri/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
 ├── src/
 │   ├── components/
-|   |   ├── Layout/ 
-|   |   |   ├── Converter.jsx
-|   |   |   ├── Navabar.css 
-|   |   |   ├── DarkModeToggle.jsx
-│   │   |   └── DarkModeToggle.css
-|   |   ├── Converter.js
-|   |   └──Converter.css 
-│   ├── App.js
-│   ├── App.css
-|   ├── index.js
+│   │   ├── Layout/
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Footer.module.jsx
+│   │   │   ├── Navbar.css
+│   │   │   └── Navbar.module.css
+│   │   └── shared/
+│   │       ├── PageTransition.jsx
+│   │       ├── PageTransition.module.jsx
+│   │       ├── SectionTitle.jsx
+│   │       └── SectionTitle.module.css
+│   ├── context/
+│   │       ├── currency.json
+│   │       └── ThemeContext.js
+│   ├── images/
+│   │       ├── logo.svg
+│   │       └── light-mode.png
+│   ├── pages/
+│   │   ├── Converter.jsx
+│   │   ├── Converter.css
+│   │   ├── Currency.jsx
+│   │   ├── Currency.module.css
+│   │   ├── ExchangeRate.jsx
+│   │   └── ExchangeRate.module.css
+│   ├── App.jsx
+│   ├── App.module.css
+│   ├── index.js
 │   └── index.css
 ├── package.json
 ├── .gitignore
@@ -118,13 +142,6 @@ herapheri/
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
----
-
-## Acknowledgements
-
-- Inspired by modern fintech apps.
-- Powered by [ExchangeRate API](https://api.exchangerate-api.com/).
 
 ---
 
