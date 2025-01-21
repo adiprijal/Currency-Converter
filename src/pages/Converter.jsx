@@ -13,8 +13,8 @@ const CurrencyConverter = () => {
   const [exchangeRate, setExchangeRate] = useState(1);
   const [exchangedValue, setExchangedValue] = useState(0);
 
-  const API_URL =
-    "https://v6.exchangerate-api.com/v6/a72dcf2c1bef2c85a0cf648e/latest";
+  const API_URL = 
+  "https://v6.exchangerate-api.com/v6/a72dcf2c1bef2c85a0cf648e/latest";
 
   // Fetch exchange rates on initial load and currency change
   useEffect(() => {
