@@ -1,14 +1,24 @@
 /* General Container */
 .converter-container {
   text-align: center;
-  background: linear-gradient(135deg, #ffffff, #e6e9f0);
-  padding: 40px 20px;
+  background: linear-gradient(135deg, #ffffff, #4cd3b1);
+  padding: 40px 20px; 
   border-radius: 15px;
-  width: 90%;
+  width: 80%;
   max-width: 500px;
-  margin: 50px auto;
+  margin: 5dvh auto; 
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.converter-container--light {
+  background: linear-gradient(135deg, #ffffff, #4cd3b1);
+  color: #2c3e50;
+}
+
+.converter-container--dark {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: white;
 }
 
 h1 {
@@ -24,6 +34,11 @@ h1 {
   align-items: center;
   gap: 15px;
   margin-bottom: 20px;
+}
+
+.input-sectionTitle {
+  font-size: 1.2rem;
+  color: #2c3e50;
 }
 
 input,

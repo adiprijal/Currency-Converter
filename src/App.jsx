@@ -13,10 +13,10 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
+        <Nav />
         <div
           className={`${styles.app} ${isDarkMode ? styles["app--dark"] : ""}`}
         >
-          <Nav />
           <main className={styles.app__main}>
 
           <Routes>

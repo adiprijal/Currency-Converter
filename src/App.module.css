@@ -1,45 +1,27 @@
-/* .app {
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   min-height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-    flex-direction: column;
-    background-color: #73745d;
-    transition: background-color var(--transition-duration), 
-
-  }
-
- .app-logo {
-   height: 150px;
-   width: 150px;
-   border-radius: 50%;  /* Makes it circular 
-   object-fit: cover;  /* Keeps it fitted *
-   overflow: hidden;
- }
-
- .app__main {
-  flex: 1;
-  padding-top: 4rem; /* 16 * 0.25rem *
-  background-color: gainsboro;
-} */
+:root {
+  --color-light-bg: linear-gradient(180deg, #a2f1e49c, #fffffff8);
+  --color-dark-bg: linear-gradient(180deg, #ffffff, #000000);
+  --color-dark-text: #ffffff;
+  --transition-duration: 0.3s;
+}
 
 ::selection {
   background-color: #1a8c88; /* Blue background for selected text */
   color: white; /* White text color */
+  color: #f4f4f2;
 }
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-light-bg);
+  background: var(--color-light-bg);
   color: var(--color-light-text);
   transition: background-color var(--transition-duration),
     color var(--transition-duration);
 }
 
 .app--dark {
-  background-color: var(--color-dark-bg);
+  background: var(--color-dark-bg);
   color: var(--color-dark-text);
 }
 
