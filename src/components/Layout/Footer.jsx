@@ -33,7 +33,7 @@ const Footer = () => {
                         ))}
                     </div>
                     <p className={`${styles.footer__text} ${isDarkMode ? styles['footer__text--dark'] : ''}`}>
-                        © {new Date().getFullYear()} Moon. All rights reserved.
+                        © {new Date().getFullYear()}  Adip Rijal. All rights reserved.
                     </p>
                 </div>
             </div>
